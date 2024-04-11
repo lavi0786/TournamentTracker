@@ -8,7 +8,7 @@ using TrackerLibrary.Models;
 namespace TrackerLibrary.DataAccess
 {
     public class SqlConnector : IDataConnection
-    {
+    {   //TODO - Make the CretePrize method actually save tot he Database
         /// <summary>
         /// saves a new prize to the database
         /// </summary>
