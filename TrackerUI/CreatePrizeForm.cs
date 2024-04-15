@@ -30,20 +30,17 @@ namespace TrackerUI
                     prizeAmountValue.Text,
                     prizePercentageValue.Text);
 
-                foreach (IDataConnection db in GlobalConfig.Connections)
-                {
-                    db.CreatePrize(model);
-                }
+                GlobalConfig.Connection.CreatePrize(model);
+
+                    placeNameValue.Text = "";
+                    placeNumberValue.Text = "";
+                    prizeAmountValue.Text = "0";
+                    prizePercentageValue.Text = "0";
             }
             else
             {
                 MessageBox.Show("This form has invalid information. Please check it and try again.");
             }
-            placeNameValue.Text = "";
-            placeNumberValue.Text = "";
-            prizeAmountValue.Text = "0";
-            prizePercentageValue.Text = "0";
-
         }
 
         private bool ValidateForm()
