@@ -33,7 +33,7 @@ namespace TrackerLibrary.DataAccess
                 p.Add("@PlaceNumber", model.PlaceNumber) ;
                 p.Add("@PlaceName", model.PlaceName);
                 p.Add("@Prizeamount", model.PrizeAmount);
-                p.Add("@PricePercentage", model.PrizePercentage);
+                p.Add("@PrizePercentage", model.PrizePercentage);
                 p.Add("@id", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
 
                 connection.Execute("dbo.spPrizes_Insert", p, commandType:CommandType.StoredProcedure);

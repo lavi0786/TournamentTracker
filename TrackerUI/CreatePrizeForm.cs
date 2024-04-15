@@ -24,8 +24,11 @@ namespace TrackerUI
         {
             if(ValidateForm())
             {
-                PrizeModel model = new PrizeModel(placeNameValue.Text, placeNumberValue.Text, prizeAmountValue.Text,
-                    pricePercentageValue.Text);
+                PrizeModel model = new PrizeModel(
+                    placeNameValue.Text, 
+                    placeNumberValue.Text, 
+                    prizeAmountValue.Text,
+                    prizePercentageValue.Text);
 
                 foreach (IDataConnection db in GlobalConfig.Connections)
                 {
@@ -39,7 +42,7 @@ namespace TrackerUI
             placeNameValue.Text = "";
             placeNumberValue.Text = "";
             prizeAmountValue.Text = "0";
-            pricePercentageValue.Text = "0";
+            prizePercentageValue.Text = "0";
 
         }
 
@@ -47,7 +50,7 @@ namespace TrackerUI
         {
             bool output = true;
             int placeNumber = 0;
-            bool placeNumberValidNumber = int.TryParse(placeNameValue.Text, out placeNumber);
+            bool placeNumberValidNumber = int.TryParse(placeNumberValue.Text, out placeNumber);
             
             if(placeNumberValidNumber == false)
             {
@@ -67,15 +70,15 @@ namespace TrackerUI
             decimal prizeAmount = 0;
             double prizePercentage = 0;
 
-            bool prizeAmoutValidNumber = decimal.TryParse(placeNameValue.Text,out prizeAmount);
-            bool prizePercentageValidNumber = double.TryParse(pricePercentageValue.Text, out prizePercentage);
+            bool prizeAmoutValidNumber = decimal.TryParse(prizeAmountValue.Text,out prizeAmount);
+            bool prizePercentageValidNumber = double.TryParse(prizePercentageValue.Text, out prizePercentage);
 
             if(prizeAmoutValidNumber == false || prizePercentageValidNumber == false) 
             { 
             output = false;
             }
 
-            if(prizeAmount <= 0 || prizePercentage <= 0)
+            if(prizeAmount <= 0 && prizePercentage <= 0)
             {
                 output = false;
             }

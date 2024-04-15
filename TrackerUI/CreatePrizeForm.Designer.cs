@@ -35,7 +35,7 @@
             placeNameLabel = new Label();
             prizeAmountValue = new TextBox();
             prizeAmountLabel = new Label();
-            pricePercentageValue = new TextBox();
+            prizePercentageValue = new TextBox();
             prizePercentageLabel = new Label();
             orLabel = new Label();
             createPrizeButton = new Button();
@@ -109,10 +109,10 @@
             // 
             // pricePercentageValue
             // 
-            pricePercentageValue.Location = new Point(294, 291);
-            pricePercentageValue.Name = "pricePercentageValue";
-            pricePercentageValue.Size = new Size(212, 43);
-            pricePercentageValue.TabIndex = 30;
+            prizePercentageValue.Location = new Point(294, 291);
+            prizePercentageValue.Name = "prizePercentageValue";
+            prizePercentageValue.Size = new Size(212, 43);
+            prizePercentageValue.TabIndex = 30;
             // 
             // prizePercentageLabel
             // 
@@ -160,7 +160,7 @@
             ClientSize = new Size(557, 444);
             Controls.Add(createPrizeButton);
             Controls.Add(orLabel);
-            Controls.Add(pricePercentageValue);
+            Controls.Add(prizePercentageValue);
             Controls.Add(prizePercentageLabel);
             Controls.Add(prizeAmountValue);
             Controls.Add(prizeAmountLabel);
@@ -187,7 +187,7 @@
         private Label placeNameLabel;
         private TextBox prizeAmountValue;
         private Label prizeAmountLabel;
-        private TextBox pricePercentageValue;
+        private TextBox prizePercentageValue;
         private Label prizePercentageLabel;
         private Label orLabel;
         private Button createPrizeButton;
